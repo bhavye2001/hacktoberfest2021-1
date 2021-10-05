@@ -1,0 +1,15 @@
+int height(struct Node* node)
+{
+    if(node==NULL){
+        return 0;
+    }
+    else{
+    int hl=height(node->left);
+    int hr=height(node->right);
+    if (hl > hr)
+            return (hl + 1);
+        else
+            return (hr + 1);
+    
+    }
+}
